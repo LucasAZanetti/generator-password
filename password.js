@@ -11,17 +11,17 @@ let charset = "abcdefghijklmnoppqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
 let novaSenha = "";
 
-sizePassword.innerHTML = sliderElement.value ;
+sizePassword.innerHTML = sliderElement.value;
 
-slider.oninput = function(){
+slider.oninput = function () {
     sizePassword.innerHTML = this.value;
 }
 
-function generatePassword(){
+function generatePassword() {
 
     let pass = "";
-    for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
-      pass += charset.charAt(Math.floor(Math.random() * n));
+    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+        pass += charset.charAt(Math.floor(Math.random() * n));
     }
 
     containerPassword.classList.remove("hidden");
@@ -30,7 +30,7 @@ function generatePassword(){
 
 }
 
-function copyPassword(){
+function copyPassword() {
     alert("Password copied")
     navigator.clipboard.writeText(novaSenha);
 }
